@@ -1,0 +1,23 @@
+#!/usr/bin/php
+
+<?php
+
+require 'vendor/autoload.php';
+
+use Symfony\Component\Console\Application;
+use Symfony\Component\Filesystem\Filesystem;
+
+use GuzzleHttp\Client;
+
+use QPautrat\JingooScraper\ScrapCommand;
+
+$console = new Application();
+$console->add(new ScrapCommand(
+    new Filesystem,
+    new Client([
+        'base_uri' => ScrapCommand::BASE_URI,
+        'cookies' => true
+    ])
+));
+
+$console->run();

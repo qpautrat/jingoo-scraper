@@ -1,0 +1,22 @@
+{
+    "name": "quentin/jingoo-scraper",
+    "authors": [
+        {
+            "name": "Quentin Pautrat",
+            "email": "quentin.pautrat@gmail.com"
+        }
+    ],
+    "description": "Provide a symfony command which scrap all pictures from all albums of your jingoo personal account",
+    "license": "MIT",
+    "version": "1.0.0",
+    "require": {
+        "guzzlehttp/guzzle": "~6.0",
+        "symfony/filesystem": "^2.7",
+        "symfony/console": "^2.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "QPautrat\\JingooScraper\\": "src"
+        }
+    }
+}
